@@ -15,7 +15,21 @@ npm install sonar
 
 ## Usage
 
-TODO
+```
+import { sonar } from 'sonar;
+
+// Register a callback with an event
+sonar.on('evt', callback);
+
+// Remove a specific callback from an event
+sonar.off('evt', callback);
+
+// Remove an entire event
+sonar.off('evt');
+
+// Trigger an event
+sonar.trigger('evt');
+```
 
 ## License
 
