@@ -1,6 +1,6 @@
 module.exports = {
     mode: 'production',
-    entry: ['@babel/polyfill', './src/sonar.js'],
+    entry: ['./src/sonar.js'],
     output: {
         path: __dirname+'/dist',
         filename: 'sonar.min.js'
@@ -12,6 +12,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ],
+                    }
                 }
             }
         ]
