@@ -14,7 +14,7 @@ export const sonar = (function(){
 	//  * Echos store all event string and their 
 	//  * associated callback functions.
 	//  */
-    const echos = {};
+    let echos = {};
 
 	/**
 	 * @function on

@@ -1,6 +1,6 @@
 {
   "name": "@devinle/sonar",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A lightweight PubSub utility",
   "main": "dist/sonar.js",
   "repository": "https://github.com/devinle/sonar.git",
