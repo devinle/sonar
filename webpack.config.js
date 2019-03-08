@@ -1,6 +1,6 @@
 module.exports = {
     mode: 'production',
-    entry: ['./src/sonar.js'],
+    entry: ['@babel/polyfill', './src/sonar.js'],
     output: {
         path: __dirname+'/dist',
         filename: 'sonar.min.js'
