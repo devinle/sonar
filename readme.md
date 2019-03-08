@@ -19,7 +19,8 @@ npm install @devinle/sonar
 import { sonar } from 'sonar;
 
 // Register a callback with an event
-sonar.on('evt', callback);
+// and optionally receive data from a trigger
+sonar.on('evt', data => {});
 
 // Remove a specific callback from an event
 sonar.off('evt', callback);
@@ -27,8 +28,8 @@ sonar.off('evt', callback);
 // Remove an entire event
 sonar.off('evt');
 
-// Trigger an event
-sonar.trigger('evt');
+// Trigger an event and send data
+sonar.trigger('evt', {...data});
 ```
 
 ## License
