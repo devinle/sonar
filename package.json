@@ -1,25 +1,22 @@
 {
   "name": "@devinle/sonar",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A lightweight PubSub utility",
-  "main": "./dist/sonar.min.js",
+  "main": "dist/sonar.min.js",
   "repository": "https://github.com/devinle/sonar.git",
   "author": "Devin Leggett",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "npx babel src/sonar.js --out-file dist/sonar.min.js --presets=@babel/preset-env",
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "jest": "^24.3.1"
   },
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/runtime": "^7.3.4",
-    "babel-jest": "^24.3.1",
-    "babel-loader": "^8.0.5",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "babel-jest": "^24.3.1"
   }
 }

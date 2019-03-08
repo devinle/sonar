@@ -1,3 +1,6 @@
+/**
+ * Used to run jest test
+ */
 module.exports = {
     presets: [
         [
