@@ -8,7 +8,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'sonar.js',
-    library: '',
-    libraryTarget: 'umd'
+    library: 'sonar',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   }
 };
