@@ -8,15 +8,13 @@
 // Decorator for public methods
 import { _on, _off } from './sonar.decorator';
 
-let echos = {};
-
 // Main export
-export const sonar = {
+export const sonar = (function(){
 	// /**
 	//  * Echos store all event string and their 
 	//  * associated callback functions.
 	//  */
-    // echos: {},
+    const echos = {};
 
 	/**
 	 * @function on
@@ -26,9 +24,9 @@ export const sonar = {
 	 * @param {String} e - A custom event name
 	 * @param {Function} cb - A callback function
 	 */
-    on: (e, cb) => {
+    const on = (e, cb) => {
         echos = _on(echos, e, cb);
-    },
+    };
 
 	/**
 	 * @function off
@@ -38,9 +36,9 @@ export const sonar = {
 	 * @param {String} e - A custom event name
 	 * @param {Function} [cb] - An optional callback function
 	 */
-	off: (e, cb=null) => {
+	const off = (e, cb=null) => {
         echos = _off(echos, e, cb);
-    },
+    };
 
 	/**
 	 * @function trigger
@@ -50,7 +48,13 @@ export const sonar = {
 	 * @param {String} e - A custom event name
 	 * @param {*} d - An optional data packet
 	 */
-	trigger: (e, d={}) => 
-        echos[e] ? echos[e].forEach(cb => cb(d)) : null,
+	const trigger = (e, d={}) => 
+        echos[e] ? echos[e].forEach(cb => cb(d)) : null;
+
+    return {
+        on,
+        off,
+        trigger
+    };
   
-};
+}());
