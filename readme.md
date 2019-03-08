@@ -16,7 +16,7 @@ npm install @devinle/sonar
 ## Usage
 
 ```
-import { sonar } from 'sonar;
+import { sonar } from 'sonar';
 
 // Register a callback with an event
 // and optionally receive data from a trigger
