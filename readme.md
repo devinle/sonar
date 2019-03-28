@@ -17,9 +17,12 @@ npm install @devinle/sonar
 ```
 import { sonar } from 'sonar';
 
+// Make a callback function
+const callback = data => {};
+
 // Register a callback with an event
 // This event can receive data
-sonar.on('evt', data => {});
+sonar.on('evt', callback);
 
 // Remove a specific callback from an event
 sonar.off('evt', callback);
