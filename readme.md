@@ -37,7 +37,7 @@ sonar.trigger('evt', {...});
 ## Tests
 
 ```
-yarn run test
+yarn test
 ```
 
 ## License
