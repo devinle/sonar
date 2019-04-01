@@ -25,5 +25,12 @@
   "dependencies": {
     "babel-jest": "^24.3.1",
     "path": "^0.12.7"
+  },
+  "bugs": {
+    "url": "https://github.com/devinle/sonar/issues"
+  },
+  "homepage": "https://github.com/devinle/sonar#readme",
+  "directories": {
+    "test": "tests"
   }
 }
