@@ -62,4 +62,8 @@ export const sonar = (function sonar() {
   };
 }());
 
+// Freeze sonar
+Object.freeze(sonar);
+
+// Export
 export default sonar;
